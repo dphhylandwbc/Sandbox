@@ -1,0 +1,32 @@
+//  Google Zanzibar authorisation model 
+// create sample data for object type csc-1233
+model
+    schema 1.1
+type user
+type group 
+    relations 
+        define member: [user]
+type account // this is the CSC identifier. 
+    relations
+        define product_type: product
+        define owner: [user]
+type locations 
+    relations: 
+        define: can_invoke: [group#member] // this group will allow assignment of the API client to it. This will mean that API clients will need to go into this model and added to the gruop
+type accounts // could this be brand? 
+type facilities 
+type collateral  
+// for all products that suport this feature in the channel then assign the feature to the product.
+type feature  
+    relations 
+       define associated_product [product] 
+type product 
+type legal_entity
+    relations
+        define members: [user] 
+type FeatureAssociation
+
+USER user_Role:er3rew276c242c-4892-44d8-922d-ac18163030af
+RELATION features
+OBJECT feature:open_Accunt
+    

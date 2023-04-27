@@ -1,0 +1,12 @@
+type user_Role ## this is like IP-AR but more flexible. 
+  relations
+    define features: [feature] ## for specific features that are not part of a role
+    define owner: [user]
+    define role: [role] // most product features will come from this role
+type feature  
+    relations 
+       define associated_with: product
+type product
+type role
+  relations
+    define features: [feature
